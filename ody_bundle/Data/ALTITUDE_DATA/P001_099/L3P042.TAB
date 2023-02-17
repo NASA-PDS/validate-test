@@ -1,0 +1,63 @@
+PDS_VERSION_ID          = PDS3                                                
+                                                                              
+RECORD_TYPE             = FIXED_LENGTH                                        
+RECORD_BYTES            = 80                                                  
+FILE_RECORDS            = 63                                                  
+LABEL_RECORDS           = 49                                                  
+RECORD_FORMAT           = "(2(F6.2,1X),F7.2,1X,F5.2,1X,3(F6.2,1X),3(F5.2,1X)" 
+^TABLE                  = 51                                                  
+PRODUCT_ID              = "CONSTANT_ALTITUDE_L3P042"                          
+INSTRUMENT_HOST_NAME    = "2001 MARS ODYSSEY"                                 
+INSTRUMENT_NAME         = ACCELEROMETER                                       
+DATA_SET_ID             = "ODY-M-ACCEL-5-ALTITUDE-V2.0"                       
+TARGET_NAME               = MARS                                              
+PRODUCT_CREATION_TIME   = 2007-11-03T09:02:41.72                              
+START_TIME              = 2001-11-20T17:01:58.00Z                             
+STOP_TIME               = 2001-11-20T17:07:18.00Z                             
+                                                                              
+SPACECRAFT_CLOCK_START_COUNT     = "UNK"                                      
+SPACECRAFT_CLOCK_STOP_COUNT      = "UNK"                                      
+                                                                              
+OBJECT                  = TABLE                                               
+ ROWS                   = 13                                                  
+ ROW_BYTES              = 80                                                  
+ INTERCHANGE_FORMAT     = ASCII                                               
+ COLUMNS                = 10                                                  
+ ^STRUCTURE             = "CONSTALT.FMT"                                      
+ DESCRIPTION            = "                                                   
+  This table contains Level 3 data for orbit 042 during aerobraking. Each row 
+  gives atmospheric characteristics at a constant altitude. When applicable,  
+  inbound and outbound legs are in separate rows.  The altitude levels going  
+  from row 1 to row 11 are:  periapsis, 1.26 nbar inbound, 1.26 nbar outbound,
+  100 km inbound, 100 km outbound, 110 km inbound, 110 km outbound, 120 km    
+  inbound, 120 km outbound, 130 km inbound, 130 km outbound, 140 km inbound,  
+  140 km outbound. The columns from one to ten are separated as follows:      
+  altitude (km), latitude (deg), longitude (deg), local solar time (hr),      
+  longitude of the sun (deg), solar zenith angle (deg), density (kg/km**3),   
+  sigma density (kg/km**3), scale height (km), and sigma scale height (km).   
+                                                                              
+  There are orbits where the periapsis altitude is above the lower altitude   
+  levels or the 1.26 nbar altitude.  Hence there are no data for some altitude
+  levels for these orbits.  For these orbits and altitudes, all quantities in 
+  the data fields are minus 1 (-1).                                           
+                                                                              
+  Robert H. Tolson                                                            
+  03-Nov-2007                                                                 
+  "                                                                           
+                                                                              
+END_OBJECT              = TABLE                                               
+END                                                                           
+                                                                              
+107.76  73.78  125.34 17.43 276.36 111.60  31.08  0.01  8.00  0.49            
+120.20  80.52  135.30 18.06 276.36 114.84   5.48  0.06  6.63  0.15            
+127.00  64.36  119.93 17.10 276.36 106.78   4.55  0.13  8.03  0.63            
+100.00  -1.00   -1.00 -1.00  -1.00  -1.00  -1.00 -1.00 -1.00 -1.00            
+100.00  -1.00   -1.00 -1.00  -1.00  -1.00  -1.00 -1.00 -1.00 -1.00            
+110.00  -1.00   -1.00 -1.00  -1.00  -1.00  -1.00 -1.00 -1.00 -1.00            
+110.00  -1.00   -1.00 -1.00  -1.00  -1.00  -1.00 -1.00 -1.00 -1.00            
+120.00  80.48  135.14 18.05 276.36 114.82   5.65  0.06  6.64  0.15            
+120.00  66.13  120.65 17.14 276.36 107.71   9.54  0.20 10.87  0.86            
+130.00  82.78  142.94 18.57 276.36 115.91   1.19  0.05  5.80  0.48            
+130.00  63.60  119.63 17.08 276.36 106.38   3.07  0.03  7.19  0.20            
+140.00  84.45  153.41 19.26 276.36 116.75   0.21  0.02  8.15  2.45            
+140.00  61.60  118.92 17.04 276.36 105.31   0.74  0.02  6.60  0.45            

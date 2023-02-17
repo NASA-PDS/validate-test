@@ -1,0 +1,514 @@
+PDS_VERSION_ID               = PDS3                                           
+                                                                              
+RECORD_TYPE                  = FIXED_LENGTH                                   
+RECORD_BYTES                 = 589                                            
+FILE_RECORDS                 = 1414                                           
+^TABLE                       = "ACCPROFP286.TAB"                              
+                                                                              
+DATA_SET_ID                  = "ODY-M-ACCEL-5-DERIVED-V1.0"                     
+MISSION_NAME                 = "2001 MARS ODYSSEY"                            
+INSTRUMENT_HOST_ID           = "ODY"                                          
+INSTRUMENT_NAME              = "ACCELEROMETER"                                
+PRODUCT_ID                   = "ACCPROFP286.TAB"                              
+TARGET_NAME                  = "MARS"                                         
+START_TIME                   = 2002-01-07T04:55:52.359                        
+STOP_TIME                    = 2002-01-07T05:19:25.358                        
+PRODUCT_CREATION_TIME        = 2008-10-28                                     
+                                                                              
+OBJECT                       = TABLE                                          
+  INTERCHANGE_FORMAT         = ASCII                                          
+  ROW_BYTES                  = 589                                            
+  ROWS                       = 1414                                           
+  COLUMNS                    = 41                                             
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "TIME_UTC"                                     
+    COLUMN_NUMBER            = 1                                              
+    DATA_TYPE                = TIME                                           
+    START_BYTE               = 3                                              
+    BYTES                    = 25                                             
+    FORMAT                   = "A25"                                          
+    UNIT                     = "N/A"                                          
+    DESCRIPTION              = "UTC time."                                    
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "TIME_AFTER_PERI"                              
+    COLUMN_NUMBER            = 2                                              
+    DATA_TYPE                = TIME                                           
+    START_BYTE               = 28                                             
+    BYTES                    = 14                                             
+    FORMAT                   = "F14.5"                                        
+    UNIT                     = "SECOND"                                       
+    DESCRIPTION              = "Time after periapsis."                        
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "RADIAL_DIST"                                  
+    COLUMN_NUMBER            = 3                                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 42                                             
+    BYTES                    = 14                                             
+    FORMAT                   = "F14.5"                                        
+    UNIT                     = "KILOMETER"                                    
+    DESCRIPTION              = "Distance between the spacecraft and           
+                               the center of mass of Mars."                   
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "ALTITUDE"                                     
+    COLUMN_NUMBER            = 4                                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 56                                             
+    BYTES                    = 14                                             
+    FORMAT                   = "F14.5"                                        
+    UNIT                     = "KILOMETER"                                    
+    DESCRIPTION              = "Altitude of spacecraft above areoid."         
+  END_OBJECT                 = COLUMN
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "LATITUDE"                                     
+    COLUMN_NUMBER            = 5                                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 70                                             
+    BYTES                    = 14                                             
+    FORMAT                   = "F14.5"                                        
+    UNIT                     = "DEGREES NORTH"                                
+    DESCRIPTION              = "Areocentric latitude, degrees north,          
+                               of spacecraft."                                
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "LONGITUDE"                                    
+    COLUMN_NUMBER            = 6                                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 84                                             
+    BYTES                    = 14                                             
+    FORMAT                   = "F14.5"                                        
+    UNIT                     = "DEGREES EAST"                                 
+    DESCRIPTION              = "Areocentric longitude, degrees east,          
+                               of spacecraft."                                
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "LOCAL_SOLAR_TIME"                             
+    COLUMN_NUMBER            = 7                                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 98                                             
+    BYTES                    = 14                                             
+    FORMAT                   = "F14.5"                                        
+    UNIT                     = "HOUR"                                         
+    DESCRIPTION              = "Local true solar time at spacecraft."         
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "SOLAR_ZENITH_ANGLE"                           
+    COLUMN_NUMBER            = 8                                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 112                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "F14.5"                                        
+    UNIT                     = "DEGREE"                                       
+    DESCRIPTION              = "Solar zenith angle at spacecraft."            
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "LS"                                           
+    COLUMN_NUMBER            = 9                                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 126                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "F14.5"                                        
+    UNIT                     = "DEGREE"                                       
+    DESCRIPTION              = "Ls of Mars."                                  
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "VRELX"                                        
+    COLUMN_NUMBER            = 10                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 140                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "KILOMETERS/SECOND"                            
+    DESCRIPTION              = "Component of the velocity of the spacecraft   
+                               with respect to the atmosphere in the +X       
+                               direction of the M01_SPACECRAFT frame."        
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "VRELY"                                        
+    COLUMN_NUMBER            = 11                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 154                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "KILOMETERS/SECOND"                            
+    DESCRIPTION              = "Component of the velocity of the spacecraft   
+                               with respect to the atmosphere in the +Y       
+                               direction of the M01_SPACECRAFT frame."        
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "VRELZ"                                        
+    COLUMN_NUMBER            = 12                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 168                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "KILOMETERS/SECOND"                            
+    DESCRIPTION              = "Component of the velocity of the spacecraft   
+                               with respect to the atmosphere in the +Z       
+                               direction of the M01_SPACECRAFT frame."        
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "VREL"                                         
+    COLUMN_NUMBER            = 13                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 182                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "KILOMETERS/SECOND"                            
+    DESCRIPTION              = "Speed of the spacecraft with respect to       
+                               the atmosphere."                               
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "OMEGAX"                                       
+    COLUMN_NUMBER            = 14                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 196                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "RADIANS/SECOND"                               
+    DESCRIPTION              = "Component of the angular velocity of the      
+                               spacecraft about the +X axis of the            
+                               M01_SPACECRAFT frame."                         
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "OMEGAY"                                       
+    COLUMN_NUMBER            = 15                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 210                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "RADIANS/SECOND"                               
+    DESCRIPTION              = "Component of the angular velocity of the      
+                               spacecraft about the +Y axis of the            
+                               M01_SPACECRAFT frame."                         
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "OMEGAZ"                                       
+    COLUMN_NUMBER            = 16                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 224                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "RADIANS/SECOND"                               
+    DESCRIPTION              = "Component of the angular velocity of the      
+                               spacecraft about the +Z axis of the            
+                               M01_SPACECRAFT frame."                         
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "ALPHA"                                        
+    COLUMN_NUMBER            = 17                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 238                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "DEGREE"                                       
+    DESCRIPTION              = "Angle between the velocity of the spacecraft  
+                               relative to the atmosphere and the -Y axis     
+                               of the M01_SPACECRAFT frame."                  
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "THETA"                                        
+    COLUMN_NUMBER            = 18                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 252                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "DEGREE"                                       
+    DESCRIPTION              = "Pitch angle, theta."                          
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "PHI"                                          
+    COLUMN_NUMBER            = 19                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 266                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "DEGREE"                                       
+    DESCRIPTION              = "Yaw angle, phi."                              
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "AY1AS1"                                       
+    COLUMN_NUMBER            = 20                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 280                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "METERS/SECOND/SECOND"                         
+    DESCRIPTION              = "Unaveraged measured acceleration in           
+                               +Y direction of M01_SPACECRAFT frame           
+                               after step 1 of data processing."              
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "AY1AS2"                                       
+    COLUMN_NUMBER            = 21                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 294                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "METERS/SECOND/SECOND"                         
+    DESCRIPTION              = "Unaveraged aerodynamic acceleration in        
+                               +Y direction of M01_SPACECRAFT frame           
+                               after step 2 of data processing."              
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "AY7AS2"                                       
+    COLUMN_NUMBER            = 22                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 308                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "METERS/SECOND/SECOND"                         
+    DESCRIPTION              = "7-point running mean aerodynamic acceleration 
+                               in +Y direction of M01_SPACECRAFT frame        
+                               after step 2 of data processing."              
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "AY39AS2"                                      
+    COLUMN_NUMBER            = 23                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 322                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "METERS/SECOND/SECOND"                         
+    DESCRIPTION              = "39-point running mean aerodynamic             
+                               acceleration in +Y direction of                
+                               M01_SPACECRAFT frame after                     
+                               step 2 of data processing."                    
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "AY1AS3"                                       
+    COLUMN_NUMBER            = 24                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 336                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "METERS/SECOND/SECOND"                         
+    DESCRIPTION              = "Unaveraged aerodynamic acceleration in +Y     
+                               direction of M01_SPACECRAFT frame              
+                               after step 3 of data processing."              
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "SAY1"                                         
+    COLUMN_NUMBER            = 25                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 350                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "METERS/SECOND/SECOND"                         
+    DESCRIPTION              = "One sigma uncertainty in AY1AS3."             
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "AY7AS3"                                       
+    COLUMN_NUMBER            = 26                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 364                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "METERS/SECOND/SECOND"                         
+    DESCRIPTION              = "7-point running mean aerodynamic acceleration 
+                               in +Y direction of M01_SPACECRAFT frame        
+                               after step 3 of data processing."              
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "SAY7"                                         
+    COLUMN_NUMBER            = 27                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 378                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "METERS/SECOND/SECOND"                         
+    DESCRIPTION              = "One sigma uncertainty in AY7AS3."             
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "AY39AS3"                                      
+    COLUMN_NUMBER            = 28                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 392                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "METERS/SECOND/SECOND"                         
+    DESCRIPTION              = "39-point running mean aerodynamic             
+                               acceleration in +Y direction of                
+                               M01_SPACECRAFT frame after                     
+                               step 3 of data processing."                    
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "SAY39"                                        
+    COLUMN_NUMBER            = 29                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 406                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "METERS/SECOND/SECOND"                         
+    DESCRIPTION              = "One sigma uncertainty in AY39AS3."            
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "CY1"                                          
+    COLUMN_NUMBER            = 30                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 420                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "N/A"                                          
+    DESCRIPTION              = "Axial force coefficient corresponding         
+                               to AY1AS3."                                    
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "SCY1"                                         
+    COLUMN_NUMBER            = 31                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 434                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "N/A"                                          
+    DESCRIPTION              = "One sigma uncertainty in CY1."                
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "CY7"                                          
+    COLUMN_NUMBER            = 32                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 448                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "N/A"                                          
+    DESCRIPTION              = "Axial force coefficient corresponding         
+                               to AY7AS3."                                    
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "SCY7"                                         
+    COLUMN_NUMBER            = 33                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 462                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "N/A"                                          
+    DESCRIPTION              = "One sigma uncertainty in CY7."                
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "CY39"                                         
+    COLUMN_NUMBER            = 34                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 476                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "N/A"                                          
+    DESCRIPTION              = "Axial force coefficient corresponding         
+                               to AY39AS3."                                   
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "SCY39"                                        
+    COLUMN_NUMBER            = 35                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 490                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "N/A"                                          
+    DESCRIPTION              = "One sigma uncertainty in CY39."               
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "RHO1"                                         
+    COLUMN_NUMBER            = 36                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 504                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "KILOGRAM PER CUBIC METER"                     
+    DESCRIPTION              = "Density corresponding to AY1AS3."             
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "SRHO1"                                        
+    COLUMN_NUMBER            = 37                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 518                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "KILOGRAM PER CUBIC METER"                     
+    DESCRIPTION              = "One sigma uncertainty in RHO1."               
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "RHO7"                                         
+    COLUMN_NUMBER            = 38                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 532                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "KILOGRAM PER CUBIC METER"                     
+    DESCRIPTION              = "Density corresponding to AY7AS3."             
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "SRHO7"                                        
+    COLUMN_NUMBER            = 39                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 546                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "KILOGRAM PER CUBIC METER"                     
+    DESCRIPTION              = "One sigma uncertainty in RHO7."               
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "RHO39"                                        
+    COLUMN_NUMBER            = 40                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 560                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "KILOGRAM PER CUBIC METER"                     
+    DESCRIPTION              = "Density corresponding to AY39AS3."            
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "SRHO39"                                       
+    COLUMN_NUMBER            = 41                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 574                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "KILOGRAM PER CUBIC METER"                     
+    DESCRIPTION              = "One sigma uncertainty in RHO39."              
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+END_OBJECT                   = TABLE                                          
+                                                                              
+END                                                                           

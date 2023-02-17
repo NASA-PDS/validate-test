@@ -1,0 +1,200 @@
+PDS_VERSION_ID               = PDS3                                           
+                                                                              
+RECORD_TYPE                  = FIXED_LENGTH                                   
+RECORD_BYTES                 = 212                                            
+FILE_RECORDS                 = 329                                            
+^TABLE                       = "IN100.TAB"                                    
+                                                                              
+DATA_SET_ID                  = "ODY-M-ACCEL-5-DERIVED-V1.0"                   
+MISSION_NAME                 = "2001 MARS ODYSSEY"                            
+INSTRUMENT_HOST_ID           = "ODY"                                          
+INSTRUMENT_NAME              = "ACCELEROMETER"                                
+PRODUCT_ID                   = "IN100.TAB"                                    
+TARGET_NAME                  = "MARS"                                         
+START_TIME                   = 2001-12-11T06:13:45.216                        
+STOP_TIME                    = 2001-12-22T03:58:34.500                        
+PRODUCT_CREATION_TIME        = 2008-10-28                                     
+                                                                              
+OBJECT                       = TABLE                                          
+  INTERCHANGE_FORMAT         = ASCII                                          
+  ROW_BYTES                  = 212                                            
+  ROWS                       = 329                                            
+  COLUMNS                    = 15                                             
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "ORBIT_NUMBER_CALT"                            
+    COLUMN_NUMBER            = 1                                              
+    DATA_TYPE                = ASCII_INTEGER                                  
+    START_BYTE               = 1                                              
+    BYTES                    = 3                                              
+    FORMAT                   = "A3"                                           
+    UNIT                     = "N/A"                                          
+    DESCRIPTION              = "Orbit number."                                
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "TIME_UTC_CALT"                                
+    COLUMN_NUMBER            = 2                                              
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 4                                              
+    BYTES                    = 25                                             
+    FORMAT                   = "A25"                                          
+    UNIT                     = "N/A"                                          
+    DESCRIPTION              = "Time (UTC) when spacecraft is                 
+                               at reference altitude."                        
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "LATITUDE_CALT"                                
+    COLUMN_NUMBER            = 3                                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 29                                             
+    BYTES                    = 14                                             
+    FORMAT                   = "F14.5"                                        
+    UNIT                     = "DEGREES NORTH"                                
+    DESCRIPTION              = "Areocentric latitude, degrees north, of       
+                               spacecraft at reference altitude."             
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "LONGITUDE_CALT"                               
+    COLUMN_NUMBER            = 4                                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 43                                             
+    BYTES                    = 14                                             
+    FORMAT                   = "F14.5"                                        
+    UNIT                     = "DEGREES EAST"                                 
+    DESCRIPTION              = "Areocentric longitude, degrees east, of       
+                               spacecraft at reference altitude."             
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "LST_CALT"                                     
+    COLUMN_NUMBER            = 5                                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 57                                             
+    BYTES                    = 14                                             
+    FORMAT                   = "F14.5"                                        
+    UNIT                     = "HOUR"                                         
+    DESCRIPTION              = "Local true solar time at spacecraft           
+                               at reference altitude."                        
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "SZA_CALT"                                     
+    COLUMN_NUMBER            = 6                                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 71                                             
+    BYTES                    = 14                                             
+    FORMAT                   = "F14.5"                                        
+    UNIT                     = "DEGREE"                                       
+    DESCRIPTION              = "Solar zenith angle at spacecraft              
+                               at reference altitude."                        
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "LS_CALT"                                      
+    COLUMN_NUMBER            = 7                                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 85                                             
+    BYTES                    = 14                                             
+    FORMAT                   = "F14.5"                                        
+    UNIT                     = "DEGREE"                                       
+    DESCRIPTION              = "Ls of Mars when spacecraft is                 
+                               at reference altitude."                        
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "RHO_CALT"                                     
+    COLUMN_NUMBER            = 8                                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 99                                             
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "KILOGRAM PER CUBIC METER"                     
+    DESCRIPTION              = "Fitted atmospheric density                    
+                               at reference altitude."                        
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "SRHO_CALT"                                    
+    COLUMN_NUMBER            = 9                                              
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 113                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "KILOGRAM PER CUBIC METER"                     
+    DESCRIPTION              = "One sigma uncertainty in RHO_CALT."           
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "DSH_CALT"                                     
+    COLUMN_NUMBER            = 10                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 127                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "KILOMETER"                                    
+    DESCRIPTION              = "Fitted density scale height                   
+                               at reference altitude."                        
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "SDSH_CALT"                                    
+    COLUMN_NUMBER            = 11                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 141                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "KILOMETER"                                    
+    DESCRIPTION              = "One sigma uncertainty in DSH_CALT."           
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "TEMP_CALT"                                    
+    COLUMN_NUMBER            = 12                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 155                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "KELVIN"                                       
+    DESCRIPTION              = "Fitted temperature                            
+                               at reference altitude."                        
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "STEMP_CALT"                                   
+    COLUMN_NUMBER            = 13                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 169                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "KELVIN"                                       
+    DESCRIPTION              = "One sigma uncertainty in TEMP_CALT."          
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "REDCHISQD_CALT"                               
+    COLUMN_NUMBER            = 14                                             
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 183                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "N/A"                                          
+    DESCRIPTION              = "Reduced chi-squared for fit."                 
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "NPTS_CALT"                                    
+    COLUMN_NUMBER            = 15                                             
+    DATA_TYPE                = ASCII_REAL
+    START_BYTE               = 197                                            
+    BYTES                    = 14                                             
+    FORMAT                   = "E14.5"                                        
+    UNIT                     = "N/A"                                          
+    DESCRIPTION              = "Number of data points used for fit."          
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+END_OBJECT                   = TABLE                                          
+                                                                              
+END                                                                           

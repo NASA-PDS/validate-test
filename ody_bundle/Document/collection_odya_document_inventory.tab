@@ -1,0 +1,14 @@
+P,urn:nasa:pds:ody_accel:document:altitude_dataset::2.0                                
+P,urn:nasa:pds:ody_accel:document:profile_dataset::1.0                                 
+P,urn:nasa:pds:ody_accel:document:dataset::1.0                                         
+P,urn:nasa:pds:ody_accel:document:raw_dataset::1.0                                     
+P,urn:nasa:pds:ody_accel:document:ratequat::1.0                                        
+P,urn:nasa:pds:ody_accel:document:constalt::1.0                                        
+P,urn:nasa:pds:ody_accel:document:orbelem::1.0                                         
+P,urn:nasa:pds:ody_accel:document:profile::1.0                                         
+P,urn:nasa:pds:ody_accel:document:accel::1.0                                           
+P,urn:nasa:pds:ody_accel:document:pds3_readme::1.0                                     
+P,urn:nasa:pds:ody_accel:document:pds3_readme_dir::1.0                                 
+P,urn:nasa:pds:ody_accel:document:sis_acc::1.0                                         
+P,urn:nasa:pds:ody_accel:document:thruster::1.0                                        
+P,urn:nasa:pds:ody_accel:document:report::2.0                                          
