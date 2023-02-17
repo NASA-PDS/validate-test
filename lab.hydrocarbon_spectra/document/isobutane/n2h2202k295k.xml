@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1G00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Document xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1G00.xsd">
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:lab.hydrocarbon_spectra:document:n2h2202k295k</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>Infrared absorption cross sections of isobutane with hydrogen and nitrogen as broadening gases</title>
+    <information_model_version>1.16.0.0</information_model_version>
+    <product_class>Product_Document</product_class>
+    <Citation_Information>
+      <author_list>Bernath, Peter</author_list>
+      <editor_list>Neakrase, Lynn; Huber, Lyle; Dodangodage, Randika</editor_list>
+      <publication_year>2021</publication_year>
+      <keyword>hydrocarbon infrared spectra; gas giants and Titan</keyword>
+      <description>IR absorption cross sections of isobutane broadened by N2 and H2 between 202K and 295K</description>
+    </Citation_Information>
+    <Modification_History>
+      <Modification_Detail>
+        <modification_date>2021-10-07</modification_date>
+        <version_id>1.0</version_id>
+        <description>Initial Label Setup</description>
+      </Modification_Detail>
+    </Modification_History>
+  </Identification_Area>
+  <Context_Area>
+    <Time_Coordinates>
+      <start_date_time>2018-10-09Z</start_date_time>
+      <stop_date_time>2019-02-08Z</stop_date_time>
+    </Time_Coordinates>
+    <Investigation_Area>
+      <name>Cross Section IR Spectroscopy of Hydrocarbons in Planetary Atmospheres</name>
+      <type>Individual Investigation</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:investigation:individual_investigation.lab.hydrocarbon_spectra</lid_reference>
+        <reference_type>document_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <Observing_System_Component>
+        <name>Canadian Light Source Facility</name>
+        <type>Host</type>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:facility:laboratory.cls</lid_reference>
+          <reference_type>is_facility</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>Far-Infrared Beamline at the Canadian Light Source Facility</name>
+        <type>Instrument</type>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:instrument:cls.farir_beamline</lid_reference>
+          <reference_type>is_instrument</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>Bruker IFS 125HR Fourier Transform Spectrometer</name>
+        <type>Instrument</type>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:instrument:multi-host.brukifs125hr_ftspec</lid_reference>
+          <reference_type>is_instrument</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>Laboratory Analog Jupiter</name>
+      <type>Laboratory Analog</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:target:laboratory_analog.jupiter</lid_reference>
+        <reference_type>document_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+    <Target_Identification>
+      <name>Laboratory Analog Saturn</name>
+      <type>Laboratory Analog</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:target:laboratory_analog.saturn</lid_reference>
+        <reference_type>document_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+    <Target_Identification>
+      <name>Laboratory Analog Titan</name>
+      <type>Laboratory Analog</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:target:laboratory_analog.saturn.titan</lid_reference>
+        <reference_type>document_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+  </Context_Area>
+  <Reference_List>
+    <External_Reference>
+      <doi>10.1016/j.jqsrt.2019.02.008</doi>
+      <reference_text>Hewett D., P. F. Bernath and B. Billinghurst. (2019), Infrared absorption cross sections of isobutane with hydrogen and nitrogen as broadening gases. J. Quant. Spectrosc. Rad. Transfer 227, 226-229.</reference_text>
+      <description>Hydrogen and nitrogen broadened isobutane absorption in 3 micron region</description>
+    </External_Reference>
+  </Reference_List>
+  <Document>
+    <revision_id>1.0</revision_id>
+    <document_name>Infrared absorption cross sections of isobutane with hydrogen and nitrogen as broadening gases</document_name>
+    <author_list>Hewett D., P. F. Bernath and B. Billinghurst</author_list>
+    <copyright>2019</copyright>
+    <publication_date>2019-02-08</publication_date>
+    <document_editions>1</document_editions>
+    <description>Published article containing IR absorption cross sections of isobutane broadened by N2 and H2 between 202K and 295K</description>
+    <Document_Edition>
+      <edition_name>N2H2202K295K</edition_name>
+      <language>English</language>
+      <files>1</files>
+      <Document_File>
+        <file_name>n2h2202k295k.pdf</file_name>
+        <local_identifier>n2h2202k295k</local_identifier>
+        <document_standard_id>PDF/A</document_standard_id>
+      </Document_File>
+    </Document_Edition>
+  </Document>
+</Product_Document>
