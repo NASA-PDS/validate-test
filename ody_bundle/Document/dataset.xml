@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1301.sch"
+ schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Document xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1301.xsd">
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:ody_accel:document:dataset</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>ODYSSEY ACCELEROMETER DERIVED DATA V1.0</title>
+        <information_model_version>1.3.0.1</information_model_version>
+        <product_class>Product_Document</product_class>
+        <Citation_Information>
+            <editor_list>Withers, P. </editor_list>
+            <publication_year>2007</publication_year>
+            <description>PDS3 ODY ACCELEROMETER Data Set Description</description>
+        </Citation_Information>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>2015-07-07</modification_date>
+                <version_id>1.0</version_id>
+                <description>This file was modified to convert to PDS4 standards</description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <Reference_List>
+        <Internal_Reference>
+            <lid_reference>urn:nasa:pds:context:instrument:accel.ody</lid_reference>
+            <reference_type>document_to_instrument</reference_type>
+        </Internal_Reference>
+        <External_Reference>
+            <reference_text>TOLSONETAL2005</reference_text>
+            <description>Tolson, R., et al., Application of
+                Accelerometer Data to Mars Odyssey Aerobraking and Atmospheric Modeling,
+                Journal of Spacecraft and Rockets, Vol 42, No. 3, pp. 435-443, 2005.</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>BAIRDETAL2007</reference_text>
+            <description>Baird, D.T., R. Tolson, S. Bougher and B. Steers, Zonal wind
+                calculations from Mars Global Surveyor Accelerometer and
+                rate data.  J. Spacecraft Rockets 44, 1180-1187, 2007.</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>BEVINGTON1969</reference_text>
+            <description>  Bevington, P.R., Data reduction and error analysis for the physical
+                sciences (1st ed.).  Cambridge University Press, New York, 1969.</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>BOUGHERETAL1999</reference_text>
+            <description> Bougher, S., S. Engel, R.G. Roble and B. Foster,
+                Comparative terrestrial planet thermospheres 2. Solar cycle
+                variation of global structure and winds at equinox.
+                J. Geophys. Res. 104, 16591-16611, 1999.</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>BOUGHERETAL2000</reference_text>
+            <description>Bougher, S.W., S. Engel, R.G. Roble and B. Foster, Comparative
+                terrestrial planet thermospheres 3. Solar cycle variation of global
+                structure and winds at solstices.  J. Geophys. Res. 105, 17669-17692,
+                2000.</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>BOUGHERETAL2002</reference_text>
+            <description>Bougher, S.W., R.G. Roble and T. Fuller-Rowell, Simulations of the
+                upper atmospheres of the terrestrial planets.  In: Mendillo, M.,
+                Nagy, A. F., Waite, J. H. (Eds.), Atmospheres in the solar system:
+                comparative aeronomy, Volume 130 of Geophys. Monogr. Ser., American
+                Geophysical Union, Washington, D.C., pp. 261-288, 2002.</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>CANCROETAL1998</reference_text>
+            <description>Cancro, G.J., R.H. Tolson and G.M. Keating, Operational Data Reduction
+                Procedure for Determining Density and Vertical Structure of the Martian
+                Upper Atmosphere From Mars Global Surveyor Accelerometer Measurements,
+                NASA/CR-998-208721, October 1998..</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>CHAVIS&amp;WILMOTH2005</reference_text>
+            <description>Chavis, Z. and R. Wilmoth, Plume modeling and application to Mars 2001
+                Odyssey aerobraking.  J. Spacecraft Rockets 42, 450-456, 2005.</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>CROWLEY&amp;TOLSON2007</reference_text>
+            <description>Tolson, R., et al., Application of
+                Accelerometer Data to Mars Odyssey Aerobraking and Atmospheric Modeling,
+                Journal of Spacecraft and Rockets, Vol 42, No. 3, pp. 435-443, 2005.</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>MAGALHAESETAL1999</reference_text>
+            <description>Magalhaes, J.A., J.T. Schofield and A. Seiff, Results of the Mars Pathfinder
+                atmospheric structure investigation. Journal of Geophysical Research, 104,
+                8943-8956, 1999</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>MASE&amp;BURKHART2000</reference_text>
+            <description>Mase, R. and D. Burkhart, Navigation small forces verification.
+                JPL document IOM-MARS01:NAV-01-005, 4 March 2000.</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>OWEN1992</reference_text>
+            <description>Owen, T., The composition and early history of the atmosphere of Mars.
+                In Kieffer, H.H., B.M. Jakosky, C.W. Snyder, C.W. and M.S. Matthews,
+                (Eds.), Mars. University of Arizona Press, pp. 818-834, 1992.</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>SMITHETAL2003B</reference_text>
+            <description>Smith, D.E., G. Neumann, R.A. Arvidson, E.A. Guinness and S. Slavney,
+                Mars Global Surveyor Laser Altimeter Mission Experiment Gridded
+                Data Record, NASA Planetary Data System, MGS-M-MOLA-5-MEGDR-L3-V1.0,
+                2003</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>TAKASHIMA2002</reference_text>
+            <description>Tolson, R., et al., Application of
+                Accelerometer Data to Mars Odyssey Aerobraking and Atmospheric Modeling,
+                Journal of Spacecraft and Rockets, Vol 42, No. 3, pp. 435-443, 2005.</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>TAKASHIMA&amp;WILMOT2002</reference_text>
+            <description>Takashima, N., Attitude angles for Mars Odyssey.
+                Unpublished NASA Langley Research Center memorandum dated 13 May
+                2002 and supplied by Jill Prince, 2002.</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>TOLSONETAL2007</reference_text>
+            <description>Tolson, R.H., G.M. Keating, R.W. Zurek, S.W. Bougher, C.G. Justus,
+                and D.C. Fritts, Application of accelerometer data to atmospheric
+                modeling during Mars aerobraking operations.  J. Spacecraft Rockets 44,
+                1172-1179, 2007.</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>TYLERETAL2000</reference_text>
+            <description>Tyler, G.L., G.Balmino, D.P. Hinson, W.L. Sjogren, D.E. Smith,
+                R. Woo, J.W. Armstrong, F.M. Flasar, R.A. Simpson, S. Asmar, A. 
+                Anabtawi and P. Priest, MGS RST Science Data Products, 
+                MGS-M-RSS-5-SDP-V1.0, NASA Planetary Data System, 2000.</description>
+        </External_Reference>
+        <External_Reference>
+            <reference_text>WITHERSETAL2003A</reference_text>
+            <description>Mars Odyssey Upper Atmospheric
+                Properties Data Records Generated
+                from Accelerometer Measurements
+                During Aerobraking, Version 1.0</description>
+        </External_Reference>
+    </Reference_List>
+    <Document>
+        <revision_id>1.0</revision_id>
+        <document_name>ODYSSEY ACCELEROMETER DERIVED DATA V1.0</document_name>
+        <editor_list>Withers, P. </editor_list>
+        <copyright>PDS</copyright>
+        <publication_date>2007-11-01</publication_date>
+        <document_editions>1</document_editions>
+        <description>
+            Data Set Overview
+            =================
+            This dataset consists of data products derived from data collected
+            by the Accelerometer (ACC) on Mars Odyssey (ODY) during its
+            aerobraking in the martian atmosphere. The DATA/ directory
+            contains four subdirectories: DATA/RAW/, DATA/PROF/, DATA/ANC/
+            and DATA/CALT/. DATA/RAW/ contains low rate and high rate data for
+            each orbit. DATA/PROF/ contains density profiles for each orbit.
+            DATA/ANC/ contains ancilliary information about each orbit.
+            DATA/CALT/ contains densities and density scale heights at
+            constant altitudes.</description>
+        <Document_Edition>
+            <edition_name>ASCII Text</edition_name>
+            <language>English</language>
+            <files>1</files>
+            <Document_File>
+                <file_name>DATASET.CAT</file_name>
+                <local_identifier>ody_dataset_cat</local_identifier>
+                <document_standard_id>7-Bit ASCII Text</document_standard_id>
+            </Document_File>
+        </Document_Edition>
+    </Document>
+</Product_Document>

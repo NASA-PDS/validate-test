@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!-- PDS4 XML/Schema for Name Space Id:psa  Version:1.3.0.0 - Mon Mar 08 17:45:12 CET 2021 -->
+  <!-- Generated from the PDS4 Information Model Version 1.15.0.0 - System Build 11a -->
+  <!-- *** This PDS4 product schema is an operational deliverable. *** -->
+  <!--                                                                           -->
+  <!--               Dictionary Stack                                            -->
+  <!-- 1.15.0.0 - pds: - Common Dictionary                                       -->
+  <!-- 1.3.0.0 - psa: - PSA Local Data Dictionary                                -->
+  <!--   file:Ingest_PDS4_PSA_1300.xml                                           -->
+  <!--                                                                           -->
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://psa.esa.int/psa/v1"
+    xmlns:psa="http://psa.esa.int/psa/v1"
+    xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="1.3.0.0">
+ 
+    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd"/>
+ 
+  <xs:annotation>
+    <xs:documentation>
+
+        This is the PSA mission dictionary LDDIngest file. 
+        
+        Modification history:
+        
+        Version 1.0.0.0, 2017-04-13
+        - Updated to PDS4 IM version 1.8.0.0
+        
+        Version 1.1.0.0, 2019-03-08
+        - Added more rules to correspond with updates to the PSA PDS4 Archiving Guide 
+
+        Version 1.1.0.1, 2019-04-10
+        - Added subtype attribute to psa:Sub-Instrument class
+        
+        Version 1.2.0.0, 2020-05-19
+        - Remove rules checking for agency prefix in URLs (to avoid issues with non-ESA data)
+        - Re-enabling filename/LID check and making case insensitive
+        - Adding check that data files have the same file-name stem as the label file
+        - Removing observing_system rule as already enforced by core schema        
+        - Exclude Product_SPICE_Kernel from check on Modification_History
+        - Added Instrument class with mode attribute
+        - Check processing_level against collection type
+        - Relaxed convention checks to allow data_calibrated* and data_derived*
+        - Added Planning_Cycles class with ltp/mtp/stp attributes
+        - Fixed pointing mode rule (was firing whenever Processing_Context was included)
+
+        Version 1.3.0.0, 2021-03-08
+        - Added class for recording telemetry (packet) gaps in products
+        - Added class for recording science traceability identifier(s)
+        - Added rules to enforce PSA naming conventions for RAW, PAR and CAL products
+        - Changed cardinality of mission phase attributes to unbounded
+          - rule added to check that count of id and names match
+        - Verbosity of some rules increased by outputting variable content in message
+        - Added observation_type attribute to Observation_Context class
+        - Remove rules on instrument_pointing_mode
+        - Updated to IM 1F00 (added dictionary_type, updated schema)
+          - modified rule checking for Observing_System_Component[pds:type eq 'Spacecraft'] to 'Host'
+        - Removed pds:Internal_Reference from Processing_Input_Identification
+        - Removed checks for msn:Mission_Information as not used
+        - Fixed but where label_and_data_filenames was not case insensitive
+        
+        
+    
+    </xs:documentation>
+  </xs:annotation>
+ 
+  <xs:element name="Instrument" type="psa:Instrument"> </xs:element>
+  <xs:element name="Mission_Information" type="psa:Mission_Information"> </xs:element>
+  <xs:element name="Observation_Context" type="psa:Observation_Context"> </xs:element>
+  <xs:element name="Processing_Context" type="psa:Processing_Context"> </xs:element>
+  <xs:element name="Quality_Information" type="psa:Quality_Information"> </xs:element>
+  <xs:element name="Sub-Instrument" type="psa:Sub-Instrument"> </xs:element>
+
+  <xs:complexType name="Instrument">
+    <xs:annotation>
+<xs:documentation>Instrument Information</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="mode" type="psa:mode" minOccurs="0" maxOccurs="unbounded"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Mission_Information">
+    <xs:annotation>
+<xs:documentation> Mission Information </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="spacecraft_clock_start_count" type="psa:spacecraft_clock_start_count" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="spacecraft_clock_stop_count" type="psa:spacecraft_clock_stop_count" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="mission_phase_name" type="psa:mission_phase_name" minOccurs="1" maxOccurs="unbounded"> </xs:element>
+      <xs:element name="mission_phase_identifier" type="psa:mission_phase_identifier" minOccurs="1" maxOccurs="unbounded"> </xs:element>
+      <xs:element name="start_orbit_number" type="psa:start_orbit_number" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="stop_orbit_number" type="psa:stop_orbit_number" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Planning_Cycles" type="psa:Planning_Cycles" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Observation_Context">
+    <xs:annotation>
+<xs:documentation>Observation_Context</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="instrument_pointing_mode" type="psa:instrument_pointing_mode" minOccurs="0" maxOccurs="unbounded"> </xs:element>
+      <xs:element name="instrument_pointing_description" type="psa:instrument_pointing_description" minOccurs="0" maxOccurs="unbounded"> </xs:element>
+      <xs:element name="observation_identifier" type="psa:observation_identifier" minOccurs="0" maxOccurs="unbounded"> </xs:element>
+      <xs:element name="observation_type" type="psa:observation_type" minOccurs="0" maxOccurs="unbounded"> </xs:element>
+      <xs:element name="science_traceability_id" type="psa:science_traceability_id" minOccurs="0" maxOccurs="unbounded"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Planning_Cycles">
+    <xs:annotation>
+      <xs:documentation>A class for listing missiong planning cycles of
+        the observational data</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ltp" type="psa:ltp" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="mtp" type="psa:mtp" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="stp" type="psa:stp" minOccurs="1" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Processing_Context">
+    <xs:annotation>
+<xs:documentation> Processing_Context </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="processing_software_title" type="psa:processing_software_title" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="processing_software_version" type="psa:processing_software_version" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="Processing_Inputs" type="psa:Processing_Inputs" minOccurs="0" maxOccurs="unbounded"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Processing_Input_Identification">
+    <xs:annotation>
+      <xs:documentation> Processing_Input_Identification
+        </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="type" type="psa:type" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="file_name" type="psa:file_name" minOccurs="1" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+    <!-- Begin assert statements for schematron - Enumerated Values -->
+    <!-- <xs:assert test=")"/> -->
+    <!-- End assert statements for schematron - Enumerated Values -->
+  </xs:complexType>
+
+  <xs:complexType name="Processing_Inputs">
+    <xs:annotation>
+<xs:documentation> Processing_Inputs </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Processing_Input_Identification" type="psa:Processing_Input_Identification" minOccurs="1" maxOccurs="unbounded"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Quality_Information">
+    <xs:annotation>
+<xs:documentation> Quality_Information </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="quality_flag" type="psa:quality_flag" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Telemetry_Gaps" type="psa:Telemetry_Gaps" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Sub-Instrument">
+    <xs:annotation>
+<xs:documentation> Sub-Instrument Information </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="identifier" type="psa:identifier" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="name" type="psa:name" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="type" type="psa:type" minOccurs="1" maxOccurs="3"> </xs:element>
+      <xs:element name="subtype" type="psa:subtype" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+    <!-- Begin assert statements for schematron - Enumerated Values -->
+    <!-- <xs:assert test="psa:type = ('Accelerometer', 'Biology experiment', 'Chemistry laboratory', 'Compilation', 'Dust analyser', 'Electric field instrument', 'Gamma ray detector', 'Gas analyser', 'Gravimeter', 'Imager', 'Imaging spectrometer', 'Interferometer', 'Langmuir probe', 'Magnetometer', 'Mass spectrometer', 'Microphone', 'Microscope', 'Mutual impedance probe', 'Neutron detector', 'Not applicable', 'Particle analyser', 'Polarimeter', 'Radar', 'Radio Receiver', 'Radio science', 'Relaxation sounder', 'SPICE kernels', 'Seismometer', 'Sensor suite', 'Spacecraft sensors', 'Spectrograph', 'Spectrometer', 'Spectrum analyser', 'Sub-surface tool', 'Surface tool', 'Temperature sensor', 'Weather station')"/> -->
+    <!-- <xs:assert test=")"/> -->
+    <!-- End assert statements for schematron - Enumerated Values -->
+  </xs:complexType>
+
+  <xs:complexType name="Telemetry_Gap">
+    <xs:annotation>
+      <xs:documentation>This class defines a single telemetry gap
+        identified in the generation of the product</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="gap_start_time" type="psa:gap_start_time" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="src_seq_gap_start" type="psa:src_seq_gap_start" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="gap_end_time" type="psa:gap_end_time" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="src_seq_gap_end" type="psa:src_seq_gap_end" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="number_missing_packets" type="psa:number_missing_packets" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="number_missing_records" type="psa:number_missing_records" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="gap_id" type="psa:gap_id" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Telemetry_Gaps">
+    <xs:annotation>
+      <xs:documentation>This class defines a list of telemetry gaps
+        identified in the generation of the product</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="number_gaps" type="psa:number_gaps" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="Telemetry_Gap" type="psa:Telemetry_Gap" minOccurs="1" maxOccurs="unbounded"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+    <xs:annotation>
+      <xs:documentation>This section contains the simpleTypes that provide more constraints
+        than those at the base data type level. The simpleTypes defined here build on the base data
+        types. This is another component of the common dictionary and therefore falls within the
+        common namespace.
+      </xs:documentation>
+    </xs:annotation>
+
+  <xs:simpleType name="file_name">
+    <xs:annotation>
+<xs:documentation> file_name </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="gap_end_time">
+    <xs:annotation>
+      <xs:documentation>The time of the first packet or measurement
+        after the telemetry gap</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
+  <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="gap_id">
+    <xs:annotation>
+      <xs:documentation>A unique identifier of the gap in
+        question</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_NonNegative_Integer">
+    	<xs:pattern value='[0-9]+'/>
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="18446744073709551615"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="gap_start_time">
+    <xs:annotation>
+      <xs:documentation>The time of the last packet or measurement prior
+        to the telemetry gap</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
+  <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="identifier">
+    <xs:annotation>
+<xs:documentation> identifier </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="instrument_pointing_description">
+    <xs:annotation>
+      <xs:documentation> instrument_pointing_description
+        </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="instrument_pointing_mode">
+    <xs:annotation>
+<xs:documentation> instrument_pointing_mode </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ltp">
+    <xs:annotation>
+      <xs:documentation>The number of the long-term planning cycle in
+        which this observation starts</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_NonNegative_Integer">
+    	<xs:pattern value='[0-9]+'/>
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="18446744073709551615"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="mission_phase_identifier">
+    <xs:annotation>
+<xs:documentation> mission_phase_identifier </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="mission_phase_name">
+    <xs:annotation>
+<xs:documentation> mission_phase_name </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="mode">
+    <xs:annotation>
+      <xs:documentation>The instrument mode (or modes) used during
+        acquisition of this data product</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="mtp">
+    <xs:annotation>
+      <xs:documentation>The number of the medium-term planning cycle in
+        which this observation starts</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_NonNegative_Integer">
+    	<xs:pattern value='[0-9]+'/>
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="18446744073709551615"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="name">
+    <xs:annotation>
+<xs:documentation> name </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="number_gaps">
+    <xs:annotation>
+      <xs:documentation>The number of telemetry gaps identified in
+        generation of the product</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_NonNegative_Integer">
+    	<xs:pattern value='[0-9]+'/>
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="18446744073709551615"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="number_missing_packets">
+    <xs:annotation>
+      <xs:documentation>The number of packets missing due to the
+        telemetry gap</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_NonNegative_Integer">
+    	<xs:pattern value='[0-9]+'/>
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="18446744073709551615"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="number_missing_records">
+    <xs:annotation>
+      <xs:documentation>The number of measurements or records missing
+        due to the telemetry gap</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_NonNegative_Integer">
+    	<xs:pattern value='[0-9]+'/>
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="18446744073709551615"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="observation_identifier">
+    <xs:annotation>
+<xs:documentation>observation_identifier</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="observation_type">
+    <xs:annotation>
+      <xs:documentation>The type of observation being performed - this
+        is mission and/or instrument specific and values may be further
+        constrained in mission/instrument dictionaries</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="processing_software_title">
+    <xs:annotation>
+<xs:documentation> processing_software_title </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="processing_software_version">
+    <xs:annotation>
+<xs:documentation> processing_software_version </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="quality_flag">
+    <xs:annotation>
+<xs:documentation> quality_flag </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="science_traceability_id">
+    <xs:annotation>
+      <xs:documentation>The ID of an entry in the mission science
+        traceability matrix satisfied, or attempted, by observations in
+        this product</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="spacecraft_clock_start_count">
+    <xs:annotation>
+<xs:documentation> spacecraft_clock_start_count </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="spacecraft_clock_stop_count">
+    <xs:annotation>
+<xs:documentation> spacecraft_clock_stop_count </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="src_seq_gap_end">
+    <xs:annotation>
+      <xs:documentation>The last missing packet source sequence count of
+        the telemetry gap</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_NonNegative_Integer">
+    	<xs:pattern value='[0-9]+'/>
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="18446744073709551615"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="src_seq_gap_start">
+    <xs:annotation>
+      <xs:documentation>The first missing packet source sequence count
+        of the telemetry gap</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_NonNegative_Integer">
+    	<xs:pattern value='[0-9]+'/>
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="18446744073709551615"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="start_orbit_number">
+    <xs:annotation>
+<xs:documentation> start_orbit_number </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_NonNegative_Integer">
+    	<xs:pattern value='[0-9]+'/>
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="18446744073709551615"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="stop_orbit_number">
+    <xs:annotation>
+<xs:documentation> stop_orbit_number </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_NonNegative_Integer">
+    	<xs:pattern value='[0-9]+'/>
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="18446744073709551615"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="stp">
+    <xs:annotation>
+      <xs:documentation>The number of the short-term planning cycle in
+        which this observation starts</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_NonNegative_Integer">
+    	<xs:pattern value='[0-9]+'/>
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="18446744073709551615"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="subtype">
+    <xs:annotation>
+<xs:documentation>type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="type">
+    <xs:annotation>
+<xs:documentation>type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

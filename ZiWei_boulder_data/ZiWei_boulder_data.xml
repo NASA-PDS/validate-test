@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1D00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:cart="http://pds.nasa.gov/pds4/cart/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+  http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1D00.xsd">
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:moon_lro_lroc_boulderdata_watkins_2018:data:ziwei_boulder_data</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>Lunar Boulder Data</title>
+    <information_model_version>1.13.0.0</information_model_version>
+    <product_class>Product_Observational</product_class>
+    <Citation_Information>
+      <author_list>Watkins, Ryan</author_list>
+      <publication_year>2018</publication_year>
+            <doi>10.1029/2019JE005963</doi>
+            <description>Boulder Distributions Around Young, Small Lunar Impact Craters and Implications for Regolith Production Rates and Landing Site Safety, JGR 2019 </description>
+    </Citation_Information>
+  </Identification_Area>
+  <Observation_Area>
+    <Time_Coordinates>
+      <start_date_time nilReason="unknown" xsi:nil="true" />
+      <stop_date_time nilReason="unknown" xsi:nil="true" />
+    </Time_Coordinates>
+    <Primary_Result_Summary>
+      <purpose>Science</purpose>
+      <processing_level>Derived</processing_level>
+      <description>A table of lunar boulder locations and descriptions</description>
+    </Primary_Result_Summary>
+    <Investigation_Area>
+      <name>Lunar Boulder data</name>
+      <type>Individual Investigation</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:investigation:mission.lunar_reconnaissance_orbiter</lid_reference>
+        <reference_type>data_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <name>Observing System for LROC data</name>
+      <Observing_System_Component>
+        <name>Lunar Reconnaissance Orbiter</name>
+        <type>Spacecraft</type>
+        <description>The instrument host for this observing system was the Lunar Reconnaissance Orbiter (LRO) spacecraft</description>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.lro</lid_reference>
+          <reference_type>is_instrument_host</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>Lunar Reconnaissance Orbiter Camera</name>
+        <type>Instrument</type>
+        <description>The instrument for this observing component was the Lunar Reconnaissance Orbiter Camera (LROC)</description>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:instrument:lroc.lro</lid_reference>
+          <reference_type>is_instrument</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>Moon</name>
+      <type>Planet</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:target:satellite.earth.moon</lid_reference>
+        <reference_type>data_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+    <Discipline_Area>
+    </Discipline_Area>
+  </Observation_Area>
+  <Reference_List>
+    <Source_Product_External>
+      <external_source_product_identifier>M150633128RE.IMG</external_source_product_identifier>
+      <reference_type>data_to_raw_source_product</reference_type>
+      <curating_facility>USGS</curating_facility>
+      <description>http://lroc.sese.asu.edu/data/LRO-L-LROC-2-EDR-V1.0/LROLRC_0032/DATA/ESM3/2017246/NAC/M1259058367LE.IMG</description>
+    </Source_Product_External>
+  </Reference_List>
+  <File_Area_Observational>
+    <File>
+      <file_name>ZiWei_boulder_data.csv</file_name>
+    </File>
+    <Header>
+      <offset unit="byte">0</offset>
+      <object_length unit="byte">331</object_length>
+      <parsing_standard_id>UTF-8 Text</parsing_standard_id>
+    </Header>
+    <Table_Delimited>
+      <local_identifier>ZiWei_boulder_data</local_identifier>
+      <offset unit="byte">0</offset>
+      <parsing_standard_id>PDS DSV 1</parsing_standard_id>
+      <records>748</records>
+      <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+      <field_delimiter>Comma</field_delimiter>
+      <Record_Delimited>
+        <fields>6</fields>
+        <groups>0</groups>
+        <Field_Delimited>
+          <name>BOULDER_DIAM_km</name>
+          <field_number>1</field_number>
+          <data_type>UTF8_String</data_type>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>BOULDER_DIAM_m</name>
+          <field_number>2</field_number>
+          <data_type>UTF8_String</data_type>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>LON</name>
+          <field_number>3</field_number>
+          <data_type>UTF8_String</data_type>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>LAT</name>
+          <field_number>4</field_number>
+          <data_type>UTF8_String</data_type>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>DISTANCE_m</name>
+          <field_number>5</field_number>
+          <data_type>UTF8_String</data_type>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>DISTANCE_CRATER_RADII</name>
+          <field_number>6</field_number>
+          <data_type>UTF8_String</data_type>
+        </Field_Delimited>
+      </Record_Delimited>
+    </Table_Delimited>
+  </File_Area_Observational>
+</Product_Observational>

@@ -1,0 +1,476 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1301.sch"
+ schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1     https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1301.xsd">
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:ody_accel:profile:accprofp212</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>2001 MARS ODYSSEY ACCELEROMETER Experiment</title>
+    <information_model_version>1.3.0.1</information_model_version>
+    <product_class>Product_Observational</product_class>
+    <Modification_History>
+      <Modification_Detail>
+        <modification_date>2016-08-30</modification_date>
+        <version_id>1.0</version_id>
+        <description>This label was modified to convert to PDS4.</description>
+      </Modification_Detail>
+    </Modification_History>
+  </Identification_Area>
+  <Observation_Area>
+    <Time_Coordinates>
+      <start_date_time>2001-12-31T02:11:16.354Z</start_date_time>
+      <stop_date_time>2001-12-31T02:28:58.354Z</stop_date_time>
+      </Time_Coordinates>
+    <Primary_Result_Summary>
+      <purpose>Science</purpose>
+      <processing_level>Derived</processing_level>
+      <Science_Facets>
+        <domain>Atmosphere</domain>
+        <discipline_name>Atmospheres</discipline_name>
+        <facet1>Structure</facet1>
+      </Science_Facets>
+    </Primary_Result_Summary>
+    <Investigation_Area>
+      <name>ODYSSEY</name>
+      <type>Mission</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:investigation:mission.2001_mars_odyssey</lid_reference>
+        <reference_type>data_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <name>ODYSSEY</name>
+      <Observing_System_Component>
+        <name>ACCELEROMETER</name>
+        <type>Instrument</type>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:instrument:accel.ody</lid_reference>
+          <reference_type>is_instrument</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>ODYSSEY</name>
+        <type>Spacecraft</type>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.ody</lid_reference>
+          <reference_type>is_instrument_host</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>MARS</name>
+      <type>Planet</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:target:planet.mars</lid_reference>
+        <reference_type>data_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+  </Observation_Area>
+  <Reference_List>
+    <Internal_Reference>
+      <lid_reference>urn:nasa:pds:ody_accel:document:sis_acc</lid_reference>
+      <reference_type>data_to_document</reference_type>
+    </Internal_Reference>
+    <Internal_Reference>
+      <lid_reference>urn:nasa:pds:ody_accel:document:dataset</lid_reference>
+      <reference_type>data_to_document</reference_type>
+    </Internal_Reference>
+  </Reference_List>
+  <File_Area_Observational>
+    <File>
+      <file_name>ACCPROFP212.TAB</file_name>
+      <local_identifier>ACCPROFP212_file</local_identifier>
+      <creation_date_time>2008-10-28</creation_date_time>
+      <file_size unit="byte">626107</file_size>
+      <records>1063</records>
+    </File>
+    <Table_Character>
+      <local_identifier>ACCPROFP212_table_character</local_identifier>
+      <offset unit="byte">0</offset>
+      <records>1063</records>
+      <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+      <Record_Character>
+        <fields>41</fields>
+        <groups>0</groups>
+        <record_length unit="byte">589</record_length>
+        <Field_Character>
+          <name>TIME_UTC</name>
+          <field_number>1</field_number>
+          <field_location unit="byte">3</field_location>
+          <data_type>ASCII_Date_Time</data_type>
+          <field_length unit="byte">25</field_length>
+          <description>UTC time.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>TIME_AFTER_PERI</name>
+          <field_number>2</field_number>
+          <field_location unit="byte">28</field_location>
+          <data_type>ASCII_Date_Time</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>s</unit>
+          <description>Time after periapsis.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>RADIAL_DIST</name>
+          <field_number>3</field_number>
+          <field_location unit="byte">42</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>KILOMETER</unit>
+          <description>Distance between the spacecraft and the center of mass of Mars.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>ALTITUDE</name>
+          <field_number>4</field_number>
+          <field_location unit="byte">56</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>KILOMETER</unit>
+          <description>Altitude of spacecraft above areoid.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>LATITUDE</name>
+          <field_number>5</field_number>
+          <field_location unit="byte">70</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>DEGREES NORTH</unit>
+          <description>Areocentric latitude, degrees north, of spacecraft.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>LONGITUDE</name>
+          <field_number>6</field_number>
+          <field_location unit="byte">84</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>DEGREES EAST</unit>
+          <description>Areocentric longitude, degrees east, of spacecraft.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>LOCAL_SOLAR_TIME</name>
+          <field_number>7</field_number>
+          <field_location unit="byte">98</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>HOUR</unit>
+          <description>Local true solar time at spacecraft.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>SOLAR_ZENITH_ANGLE</name>
+          <field_number>8</field_number>
+          <field_location unit="byte">112</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>DEGREE</unit>
+          <description>Solar zenith angle at spacecraft.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>LS</name>
+          <field_number>9</field_number>
+          <field_location unit="byte">126</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>DEGREE</unit>
+          <description>Ls of Mars.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>VRELX</name>
+          <field_number>10</field_number>
+          <field_location unit="byte">140</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>KILOMETERS/SECOND</unit>
+          <description>Component of the velocity of the spacecraft with respect to the atmosphere in the +X direction of the M01_SPACECRAFT frame.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>VRELY</name>
+          <field_number>11</field_number>
+          <field_location unit="byte">154</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>KILOMETERS/SECOND</unit>
+          <description>Component of the velocity of the spacecraft with respect to the atmosphere in the +Y direction of the M01_SPACECRAFT frame.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>VRELZ</name>
+          <field_number>12</field_number>
+          <field_location unit="byte">168</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>KILOMETERS/SECOND</unit>
+          <description>Component of the velocity of the spacecraft with respect to the atmosphere in the +Z direction of the M01_SPACECRAFT frame.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>VREL</name>
+          <field_number>13</field_number>
+          <field_location unit="byte">182</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>KILOMETERS/SECOND</unit>
+          <description>Speed of the spacecraft with respect to the atmosphere.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>OMEGAX</name>
+          <field_number>14</field_number>
+          <field_location unit="byte">196</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>RADIANS/SECOND</unit>
+          <description>Component of the angular velocity of the spacecraft about the +X axis of the M01_SPACECRAFT frame.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>OMEGAY</name>
+          <field_number>15</field_number>
+          <field_location unit="byte">210</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>RADIANS/SECOND</unit>
+          <description>Component of the angular velocity of the spacecraft about the +Y axis of the M01_SPACECRAFT frame.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>OMEGAZ</name>
+          <field_number>16</field_number>
+          <field_location unit="byte">224</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>RADIANS/SECOND</unit>
+          <description>Component of the angular velocity of the spacecraft about the +Z axis of the M01_SPACECRAFT frame.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>ALPHA</name>
+          <field_number>17</field_number>
+          <field_location unit="byte">238</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>DEGREE</unit>
+          <description>Angle between the velocity of the spacecraft relative to the atmosphere and the -Y axis of the M01_SPACECRAFT frame.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>THETA</name>
+          <field_number>18</field_number>
+          <field_location unit="byte">252</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>DEGREE</unit>
+          <description>Pitch angle, theta.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>PHI</name>
+          <field_number>19</field_number>
+          <field_location unit="byte">266</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>DEGREE</unit>
+          <description>Yaw angle, phi.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>AY1AS1</name>
+          <field_number>20</field_number>
+          <field_location unit="byte">280</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>METERS/SECOND/SECOND</unit>
+          <description>Unaveraged measured acceleration in +Y direction of M01_SPACECRAFT frame after step 1 of data processing.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>AY1AS2</name>
+          <field_number>21</field_number>
+          <field_location unit="byte">294</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>METERS/SECOND/SECOND</unit>
+          <description>Unaveraged aerodynamic acceleration in +Y direction of M01_SPACECRAFT frame after step 2 of data processing.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>AY7AS2</name>
+          <field_number>22</field_number>
+          <field_location unit="byte">308</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>METERS/SECOND/SECOND</unit>
+          <description>7-point running mean aerodynamic acceleration in +Y direction of M01_SPACECRAFT frame after step 2 of data processing.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>AY39AS2</name>
+          <field_number>23</field_number>
+          <field_location unit="byte">322</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>METERS/SECOND/SECOND</unit>
+          <description>39-point running mean aerodynamic acceleration in +Y direction of M01_SPACECRAFT frame after step 2 of data processing.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>AY1AS3</name>
+          <field_number>24</field_number>
+          <field_location unit="byte">336</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>METERS/SECOND/SECOND</unit>
+          <description>Unaveraged aerodynamic acceleration in +Y direction of M01_SPACECRAFT frame after step 3 of data processing.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>SAY1</name>
+          <field_number>25</field_number>
+          <field_location unit="byte">350</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>METERS/SECOND/SECOND</unit>
+          <description>One sigma uncertainty in AY1AS3.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>AY7AS3</name>
+          <field_number>26</field_number>
+          <field_location unit="byte">364</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>METERS/SECOND/SECOND</unit>
+          <description>7-point running mean aerodynamic acceleration in +Y direction of M01_SPACECRAFT frame after step 3 of data processing.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>SAY7</name>
+          <field_number>27</field_number>
+          <field_location unit="byte">378</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>METERS/SECOND/SECOND</unit>
+          <description>One sigma uncertainty in AY7AS3.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>AY39AS3</name>
+          <field_number>28</field_number>
+          <field_location unit="byte">392</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>METERS/SECOND/SECOND</unit>
+          <description>39-point running mean aerodynamic acceleration in +Y direction of M01_SPACECRAFT frame after step 3 of data processing.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>SAY39</name>
+          <field_number>29</field_number>
+          <field_location unit="byte">406</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>METERS/SECOND/SECOND</unit>
+          <description>One sigma uncertainty in AY39AS3.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>CY1</name>
+          <field_number>30</field_number>
+          <field_location unit="byte">420</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <description>Axial force coefficient corresponding to AY1AS3.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>SCY1</name>
+          <field_number>31</field_number>
+          <field_location unit="byte">434</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <description>One sigma uncertainty in CY1.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>CY7</name>
+          <field_number>32</field_number>
+          <field_location unit="byte">448</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <description>Axial force coefficient corresponding to AY7AS3.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>SCY7</name>
+          <field_number>33</field_number>
+          <field_location unit="byte">462</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <description>One sigma uncertainty in CY7.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>CY39</name>
+          <field_number>34</field_number>
+          <field_location unit="byte">476</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <description>Axial force coefficient corresponding to AY39AS3.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>SCY39</name>
+          <field_number>35</field_number>
+          <field_location unit="byte">490</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <description>One sigma uncertainty in CY39.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>RHO1</name>
+          <field_number>36</field_number>
+          <field_location unit="byte">504</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>KILOGRAM PER CUBIC METER</unit>
+          <description>Density corresponding to AY1AS3.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>SRHO1</name>
+          <field_number>37</field_number>
+          <field_location unit="byte">518</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>KILOGRAM PER CUBIC METER</unit>
+          <description>One sigma uncertainty in RHO1.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>RHO7</name>
+          <field_number>38</field_number>
+          <field_location unit="byte">532</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>KILOGRAM PER CUBIC METER</unit>
+          <description>Density corresponding to AY7AS3.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>SRHO7</name>
+          <field_number>39</field_number>
+          <field_location unit="byte">546</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>KILOGRAM PER CUBIC METER</unit>
+          <description>One sigma uncertainty in RHO7.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>RHO39</name>
+          <field_number>40</field_number>
+          <field_location unit="byte">560</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>KILOGRAM PER CUBIC METER</unit>
+          <description>Density corresponding to AY39AS3.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>SRHO39</name>
+          <field_number>41</field_number>
+          <field_location unit="byte">574</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>KILOGRAM PER CUBIC METER</unit>
+          <description>One sigma uncertainty in RHO39.</description>
+        </Field_Character>
+      </Record_Character>
+    </Table_Character>
+  </File_Area_Observational>
+  <File_Area_Observational_Supplemental>
+    <File>
+      <file_name>ACCPROFP212.LBL</file_name>
+      <local_identifier>ACCPROFP212_pds3file</local_identifier>
+      <creation_date_time>2008-10-28</creation_date_time>
+      <file_size unit="byte">41081</file_size>
+      </File>
+    <Stream_Text>
+      <local_identifier>ACCPROFP212_pds3file_stream</local_identifier>
+      <offset unit="byte">0</offset>
+      <object_length unit="byte">44165</object_length>
+      <parsing_standard_id>7-Bit ASCII Text</parsing_standard_id>
+      <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+    </Stream_Text>
+  </File_Area_Observational_Supplemental>
+</Product_Observational>

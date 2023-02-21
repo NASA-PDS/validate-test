@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1301.sch"
+ schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1     https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1301.xsd">
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:ody_accel:calt:out130</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>2001 MARS ODYSSEY ACCELEROMETER Experiment</title>
+    <information_model_version>1.3.0.1</information_model_version>
+    <product_class>Product_Observational</product_class>
+    <Modification_History>
+      <Modification_Detail>
+        <modification_date>2016-08-30</modification_date>
+        <version_id>1.0</version_id>
+        <description>This label was modified to convert to PDS4.</description>
+      </Modification_Detail>
+    </Modification_History>
+  </Identification_Area>
+  <Observation_Area>
+    <Time_Coordinates>
+      <start_date_time>2001-10-31T19:30:30.497Z</start_date_time>
+      <stop_date_time>2002-01-11T07:13:51.363Z</stop_date_time>
+      </Time_Coordinates>
+    <Primary_Result_Summary>
+      <purpose>Science</purpose>
+      <processing_level>Derived</processing_level>
+      <Science_Facets>
+        <domain>Atmosphere</domain>
+        <discipline_name>Atmospheres</discipline_name>
+        <facet1>Structure</facet1>
+      </Science_Facets>
+    </Primary_Result_Summary>
+    <Investigation_Area>
+      <name>ODYSSEY</name>
+      <type>Mission</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:investigation:mission.2001_mars_odyssey</lid_reference>
+        <reference_type>data_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <name>ODYSSEY</name>
+      <Observing_System_Component>
+        <name>ACCELEROMETER</name>
+        <type>Instrument</type>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:instrument:accel.ody</lid_reference>
+          <reference_type>is_instrument</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>ODYSSEY</name>
+        <type>Spacecraft</type>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.ody</lid_reference>
+          <reference_type>is_instrument_host</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>MARS</name>
+      <type>Planet</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:target:planet.mars</lid_reference>
+        <reference_type>data_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+  </Observation_Area>
+  <Reference_List>
+    <Internal_Reference>
+      <lid_reference>urn:nasa:pds:ody_accel:document:sis_acc</lid_reference>
+      <reference_type>data_to_document</reference_type>
+    </Internal_Reference>
+    <Internal_Reference>
+      <lid_reference>urn:nasa:pds:ody_accel:document:dataset</lid_reference>
+      <reference_type>data_to_document</reference_type>
+    </Internal_Reference>
+  </Reference_List>
+  <File_Area_Observational>
+    <File>
+      <file_name>OUT130.TAB</file_name>
+      <local_identifier>OUT130_file</local_identifier>
+      <creation_date_time>2008-10-28</creation_date_time>
+      <file_size unit="byte">69748</file_size>
+      <records>329</records>
+    </File>
+    <Table_Character>
+      <local_identifier>OUT130_table_character</local_identifier>
+      <offset unit="byte">1</offset>
+      <records>329</records>
+      <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+      <Record_Character>
+        <fields>15</fields>
+        <groups>0</groups>
+        <record_length unit="byte">212</record_length>
+        <Field_Character>
+          <name>ORBIT_NUMBER_CALT</name>
+          <field_number>1</field_number>
+          <field_location unit="byte">1</field_location>
+          <data_type>ASCII_Integer</data_type>
+          <field_length unit="byte">3</field_length>
+          <description>Orbit number.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>TIME_UTC_CALT</name>
+          <field_number>2</field_number>
+          <field_location unit="byte">4</field_location>
+          <data_type>ASCII_String</data_type>
+          <field_length unit="byte">25</field_length>
+          <description>Time (UTC) when spacecraft is at reference altitude.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>LATITUDE_CALT</name>
+          <field_number>3</field_number>
+          <field_location unit="byte">29</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>DEGREES NORTH</unit>
+          <description>Areocentric latitude, degrees north, of spacecraft at reference altitude.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>LONGITUDE_CALT</name>
+          <field_number>4</field_number>
+          <field_location unit="byte">43</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>DEGREES EAST</unit>
+          <description>Areocentric longitude, degrees east, of spacecraft at reference altitude.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>LST_CALT</name>
+          <field_number>5</field_number>
+          <field_location unit="byte">57</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>HOUR</unit>
+          <description>Local true solar time at spacecraft at reference altitude.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>SZA_CALT</name>
+          <field_number>6</field_number>
+          <field_location unit="byte">71</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>DEGREE</unit>
+          <description>Solar zenith angle at spacecraft at reference altitude.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>LS_CALT</name>
+          <field_number>7</field_number>
+          <field_location unit="byte">85</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>DEGREE</unit>
+          <description>Ls of Mars when spacecraft is at reference altitude.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>RHO_CALT</name>
+          <field_number>8</field_number>
+          <field_location unit="byte">99</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>KILOGRAM PER CUBIC METER</unit>
+          <description>Fitted atmospheric density at reference altitude.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>SRHO_CALT</name>
+          <field_number>9</field_number>
+          <field_location unit="byte">113</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>KILOGRAM PER CUBIC METER</unit>
+          <description>One sigma uncertainty in RHO_CALT.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>DSH_CALT</name>
+          <field_number>10</field_number>
+          <field_location unit="byte">127</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>KILOMETER</unit>
+          <description>Fitted density scale height at reference altitude.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>SDSH_CALT</name>
+          <field_number>11</field_number>
+          <field_location unit="byte">141</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>KILOMETER</unit>
+          <description>One sigma uncertainty in DSH_CALT.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>TEMP_CALT</name>
+          <field_number>12</field_number>
+          <field_location unit="byte">155</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>KELVIN</unit>
+          <description>Fitted temperature at reference altitude.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>STEMP_CALT</name>
+          <field_number>13</field_number>
+          <field_location unit="byte">169</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <unit>KELVIN</unit>
+          <description>One sigma uncertainty in TEMP_CALT.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>REDCHISQD_CALT</name>
+          <field_number>14</field_number>
+          <field_location unit="byte">183</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <description>Reduced chi-squared for fit.</description>
+        </Field_Character>
+        <Field_Character>
+          <name>NPTS_CALT</name>
+          <field_number>15</field_number>
+          <field_location unit="byte">197</field_location>
+          <data_type>ASCII_Real</data_type>
+          <field_length unit="byte">14</field_length>
+          <description>Number of data points used for fit.</description>
+        </Field_Character>
+      </Record_Character>
+    </Table_Character>
+  </File_Area_Observational>
+  <File_Area_Observational_Supplemental>
+    <File>
+      <file_name>OUT130.LBL</file_name>
+      <local_identifier>OUT130_pds3file</local_identifier>
+      <creation_date_time>2008-10-28</creation_date_time>
+      <file_size unit="byte">15963</file_size>
+      </File>
+    <Stream_Text>
+      <local_identifier>OUT130_pds3file_stream</local_identifier>
+      <offset unit="byte">0</offset>
+      <object_length unit="byte">15963</object_length>
+      <parsing_standard_id>7-Bit ASCII Text</parsing_standard_id>
+      <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+    </Stream_Text>
+  </File_Area_Observational_Supplemental>
+</Product_Observational>

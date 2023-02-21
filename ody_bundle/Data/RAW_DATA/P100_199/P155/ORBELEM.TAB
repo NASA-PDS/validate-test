@@ -1,0 +1,38 @@
+PDS_VERSION_ID                = PDS3                                                                                                           
+                                                                                                                                               
+RECORD_TYPE                   = FIXED_LENGTH                                                                                                   
+RECORD_BYTES                  = 145                                                                                                            
+FILE_RECORDS                  = 38                                                                                                             
+LABEL_RECORDS                 = 36                                                                                                             
+RECORD_FORMAT                 = "(5(E23.15E3,1X),E23.15E3)"                                                                                    
+^TABLE                        = 38                                                                                                             
+PRODUCT_ID                    = "PERIAPSIS_ORBITAL_ELEMENTS_P155"                                                                              
+INSTRUMENT_HOST_NAME          = "2001 MARS ODYSSEY"                                                                                            
+INSTRUMENT_NAME               = "ACCELEROMETER"                                                                                                
+DATA_SET_ID                   = "ODY-M-ACCEL-2-ACCELDATA-V2.0"                                                                                 
+TARGET_NAME                   = MARS                                                                                                           
+PRODUCT_CREATION_TIME         = 2007-11-03T10:00:45.11                                                                                         
+START_TIME                    = "N/A"                                                                                                          
+STOP_TIME                     = "N/A"                                                                                                          
+                                                                                                                                               
+SPACECRAFT_CLOCK_START_COUNT     = "UNK"                                                                                                       
+SPACECRAFT_CLOCK_STOP_COUNT      = "UNK"                                                                                                       
+                                                                                                                                               
+OBJECT                        = TABLE                                                                                                          
+ ROWS                         = 1                                                                                                              
+ ROW_BYTES                    = 143                                                                                                            
+ INTERCHANGE_FORMAT           = ASCII                                                                                                          
+ COLUMNS                      = 6                                                                                                              
+ ^STRUCTURE                   = "ORBELEM.FMT"                                                                                                  
+ DESCRIPTION                  = "                                                                                                              
+  This file contains the Orbital Elements at periapsis as given on the                                                                         
+  reconstructed OPTGs created by NAV for orbit 155 of aerobraking.                                                                             
+                                                                                                                                               
+  R.H. Tolson                                                                                                                                  
+  03-Nov-2007                                                                                                                                  
+  "                                                                                                                                            
+                                                                                                                                               
+END_OBJECT                    = TABLE                                                                                                          
+END                                                                                                                                            
+                                                                                                                                               
+ 5.761590071097019E+003  3.960443348159450E-001  1.635903840265977E+000  5.528623426637762E-001  1.454883748434981E+000  6.238909030600000E+007

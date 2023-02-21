@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1G00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1G00.xsd">
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:lab.hydrocarbon_spectra:data:ethane_20p53pa_h2_4kpa_195p85k</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>Laboratory Study of Hydrocarbon IR Spectra Data Product</title>
+    <information_model_version>1.16.0.0</information_model_version>
+    <product_class>Product_Observational</product_class>
+  </Identification_Area>
+  <Observation_Area>
+    <Time_Coordinates>
+      <start_date_time>2019-01Z</start_date_time>
+      <stop_date_time>2019-01Z</stop_date_time>
+    </Time_Coordinates>
+    <Primary_Result_Summary>
+      <purpose>Science</purpose>
+      <processing_level>Raw</processing_level>
+      <Science_Facets>
+        <domain>Atmosphere</domain>
+        <discipline_name>Spectroscopy</discipline_name>
+        <facet1>Tabulated</facet1>
+      </Science_Facets>
+    </Primary_Result_Summary>
+    <Investigation_Area>
+      <name>Cross Section IR Spectroscopy of Hydrocarbons in Planetary Atmospheres</name>
+      <type>Individual Investigation</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:investigation:individual_investigation.lab.hydrocarbon_spectra</lid_reference>
+        <reference_type>data_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <name>Canadian Light Source</name>
+      <Observing_System_Component>
+        <name>Canadian Light Source Facility</name>
+        <type>Host</type>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:facility:laboratory.cls</lid_reference>
+          <reference_type>is_facility</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>Far-Infrared Beamline at the Canadian Light Source Facility</name>
+        <type>Instrument</type>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:instrument:cls.farir_beamline</lid_reference>
+          <reference_type>is_instrument</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>Bruker IFS 125HR Fourier Transform Spectrometer</name>
+        <type>Instrument</type>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:instrument:multi-host.brukifs125hr_ftspec</lid_reference>
+          <reference_type>is_instrument</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>Laboratory Analog Jupiter</name>
+      <type>Laboratory Analog</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:target:laboratory_analog.jupiter</lid_reference>
+        <reference_type>data_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+    <Target_Identification>
+      <name>Laboratory Analog Saturn</name>
+      <type>Laboratory Analog</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:target:laboratory_analog.saturn</lid_reference>
+        <reference_type>data_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+    <Target_Identification>
+      <name>Laboratory Analog Titan</name>
+      <type>Laboratory Analog</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:target:laboratory_analog.saturn.titan</lid_reference>
+        <reference_type>data_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+  </Observation_Area>
+  <Reference_List>
+    <Internal_Reference>
+      <lid_reference>urn:nasa:pds:lab.hydrocarbon_spectra:document:h2n2195k295k</lid_reference>
+      <reference_type>data_to_document</reference_type>
+    </Internal_Reference>
+    <External_Reference>
+      <doi>10.1016/j.jqsrt.2019.106780</doi>
+      <reference_text>Hewett, D., P.F. Bernath, J. Zhao, B. Billinghurst, (2020), Near infrared absorption cross sections for ethane broadened by hydrogen and nitrogen, J. Quant. Spect. and Rad. Transfer, 242, 106780.</reference_text>
+      <description>Hydrogen and nitrogen broadened ethane absorption in near-IR</description>
+    </External_Reference>
+  </Reference_List>
+  <File_Area_Observational>
+    <File>
+      <file_name>ethane_20p53pa_h2_4kpa_195p85k.csv</file_name>
+      <local_identifier>ethane_20p53pa_h2_4kpa_195p85k</local_identifier>
+      <creation_date_time>2019-07-09T10:56:00</creation_date_time>
+      <file_size unit="byte">187732256</file_size>
+      <records>6371884</records>
+    </File>
+    <Table_Delimited>
+      <name>ethane_20p53pa_h2_4kpa_195p85k.csv</name>
+      <local_identifier>ethane_20p53pa_h2_4kpa_195p85k_table</local_identifier>
+      <offset unit="byte">0</offset>
+      <object_length unit="byte">187732256</object_length>
+      <parsing_standard_id>PDS DSV 1</parsing_standard_id>
+      <description>Measured absorption cross-sections of ethane with hydrogen as a broadening gas (20.53 Pa of ethane with a  total pressure of 4 kPa of hydrogen) at 195.85 K.</description>
+      <records>6371884</records>
+      <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+      <field_delimiter>Comma</field_delimiter>
+      <Record_Delimited>
+        <fields>2</fields>
+        <groups>0</groups>
+        <Field_Delimited>
+          <name>cm-1</name>
+          <field_number>1</field_number>
+          <data_type>ASCII_Real</data_type>
+          <unit>cm^-1</unit>
+          <description>wavenumber</description>
+        </Field_Delimited>
+        <Field_Delimited>
+          <name>cm2/molecule</name>
+          <field_number>2</field_number>
+          <data_type>ASCII_Real</data_type>
+          <unit>cm^2/molecule</unit>
+          <description>Absorption cross section in cm2/molecule</description>
+        </Field_Delimited>
+      </Record_Delimited>
+    </Table_Delimited>
+  </File_Area_Observational>
+</Product_Observational>

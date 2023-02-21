@@ -1,0 +1,41 @@
+
+PDS Validate Tool Report
+
+Configuration:
+   Version                       3.1.1
+   Date                          2023-01-23T10:45:45Z
+
+Parameters:
+   Targets                       [file:/tmp/pds/maven_orb_rec_210101_210401_v1.xml/]
+   Severity Level                WARNING
+   Recurse Directories           false
+   File Filters Used             [*.xml, *.XML]
+   Data Content Validation       on
+   Product Level Validation      on
+   Max Errors                    100000
+   Registered Contexts File      /opt/validate/resources/registered_context_products.json
+
+
+
+Product Level Validation Results
+
+  PASS: file:/tmp/pds/maven_orb_rec_210101_210401_v1.xml/maven_orb_rec_210101_210401_v1.xml
+        1 product validation(s) completed
+
+Summary:
+
+  0 error(s)
+  0 warning(s)
+
+  Product Validation Summary:
+    1          product(s) passed
+    0          product(s) failed
+    0          product(s) skipped
+
+  Referential Integrity Check Summary:
+    0          check(s) passed
+    0          check(s) failed
+    0          check(s) skipped
+
+
+End of Report

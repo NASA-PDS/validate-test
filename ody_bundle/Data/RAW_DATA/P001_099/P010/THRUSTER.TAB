@@ -1,0 +1,62 @@
+PDS_VERSION_ID                = PDS3                                          
+                                                                              
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 80                                            
+FILE_RECORDS                  = 62                                            
+LABEL_RECORDS                 = 39                                            
+RECORD_FORMAT                 = "(I4,1X,I3,1X,I2,1X,I2,1X,F6.3,8(1X,F7.3))"   
+^TABLE                        = 40                                            
+PRODUCT_ID                    = "THRUSTER_ON_TIMES_P010"                      
+INSTRUMENT_HOST_NAME          = "2001 MARS ODYSSEY"                           
+INSTRUMENT_NAME               = "ACCELEROMETER"                               
+DATA_SET_ID                   = "ODY-M-ACCEL-2-ACCELDATA-V2.0"                
+TARGET_NAME                   = MARS                                          
+PRODUCT_CREATION_TIME         = 2007-11-03T10:00:06.95                        
+START_TIME                    = 2001-10-31T01:02:17.30Z                       
+STOP_TIME                     = 2001-10-31T01:09:44.30Z                       
+                                                                              
+SPACECRAFT_CLOCK_START_COUNT     = "UNK"                                      
+SPACECRAFT_CLOCK_STOP_COUNT      = "UNK"                                      
+                                                                              
+OBJECT                        = TABLE                                         
+ ROWS                         = 23                                            
+ ROW_BYTES                    = 80                                            
+ INTERCHANGE_FORMAT           = ASCII                                         
+ COLUMNS                      = 5                                             
+ ^STRUCTURE                   = "THRUSTER.FMT"                                
+ DESCRIPTION                  = "                                             
+  This file contains the thruster on times, in columns 2 through 5, which     
+  correspond to the times in column one from Mars Odyssey for orbit 010       
+  of aerobraking at Mars.  The thruster on times are a summation of the       
+  time each thruster was fired from the beginning of each aerobraking pass.   
+  A change in the thruster on times indicates a thruster has been fired.      
+  R.H. Tolson                                                                 
+  03-Nov-2007                                                                 
+  "                                                                           
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           
+                                                                              
+2001-304T01:02:17.298   0.000   0.000   0.300   0.300                         
+2001-304T01:04:21.298   0.000   0.000   0.400   0.400                         
+2001-304T01:05:17.298   0.000   0.000   0.500   0.500                         
+2001-304T01:08:49.298   0.100   0.000   0.500   0.600                         
+2001-304T01:08:50.298   0.200   0.000   0.500   0.700                         
+2001-304T01:08:51.298   0.300   0.000   0.500   0.800                         
+2001-304T01:08:52.298   0.400   0.000   0.500   0.900                         
+2001-304T01:08:53.298   0.500   0.000   0.500   1.000                         
+2001-304T01:08:55.298   0.600   0.000   0.500   1.100                         
+2001-304T01:08:57.298   0.700   0.000   0.500   1.200                         
+2001-304T01:08:59.298   0.800   0.000   0.500   1.300                         
+2001-304T01:09:00.298   0.900   0.000   0.500   1.400                         
+2001-304T01:09:03.298   1.000   0.000   0.500   1.500                         
+2001-304T01:09:06.298   1.100   0.000   0.500   1.600                         
+2001-304T01:09:09.298   1.200   0.000   0.500   1.700                         
+2001-304T01:09:13.298   1.300   0.000   0.500   1.800                         
+2001-304T01:09:19.298   1.400   0.000   0.500   1.900                         
+2001-304T01:09:24.298   1.400   0.100   0.500   2.000                         
+2001-304T01:09:25.298   1.400   0.200   0.500   2.100                         
+2001-304T01:09:28.298   1.400   0.400   0.500   2.300                         
+2001-304T01:09:32.298   1.400   0.600   0.500   2.500                         
+2001-304T01:09:39.298   1.400   0.700   0.500   2.600                         
+2001-304T01:09:44.298   1.400   0.800   0.500   2.700                         

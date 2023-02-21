@@ -1,0 +1,71 @@
+PDS_VERSION_ID               = PDS3                                           
+                                                                              
+RECORD_TYPE                  = FIXED_LENGTH                                   
+RECORD_BYTES                 = 73                                             
+FILE_RECORDS                 = 1092                                           
+^TABLE                       = "ACCLOP193.TAB"                                
+                                                                              
+DATA_SET_ID                  = "ODY-M-ACCEL-5-DERIVED-V1.0"                     
+MISSION_NAME                 = "2001 MARS ODYSSEY"                            
+INSTRUMENT_HOST_ID           = "ODY"                                          
+INSTRUMENT_NAME              = "ACCELEROMETER"                                
+PRODUCT_ID                   = "ACCLOP193.TAB"                                
+TARGET_NAME                  = "MARS"                                         
+SPACECRAFT_CLOCK_START_COUNT = "UNK"                                          
+SPACECRAFT_CLOCK_STOP_COUNT  = "UNK"                                          
+START_TIME                   = 2001-12-28T20:36:50.113                        
+STOP_TIME                    = 2001-12-28T20:55:01.107                        
+PRODUCT_CREATION_TIME        = 2008-10-28                                     
+                                                                              
+OBJECT                       = TABLE                                          
+  INTERCHANGE_FORMAT         = ASCII                                          
+  ROW_BYTES                  = 73                                             
+  ROWS                       = 1092                                           
+  COLUMNS                    = 4                                              
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "TIME_LO_RAW"                                  
+    DATA_TYPE                = CHARACTER                                      
+    START_BYTE               = 1                                              
+    BYTES                    = 23                                             
+    FORMAT                   = "A23"                                          
+    UNIT                     = "N/A"                                          
+    DESCRIPTION              = "Time (UTC)."                                  
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "AX_LO_RAW"                                    
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 24                                             
+    BYTES                    = 16                                             
+    FORMAT                   = "E16.8"                                        
+    UNIT                     = "METERS/SECOND/SECOND"                         
+    DESCRIPTION              = "Measured low-rate acceleration in             
+                               +X direction of M01_SPACECRAFT frame."         
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "AY_LO_RAW"                                    
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 40                                             
+    BYTES                    = 16                                             
+    FORMAT                   = "E16.8"                                        
+    UNIT                     = "METERS/SECOND/SECOND"                         
+    DESCRIPTION              = "Measured low-rate acceleration in             
+                               +Y direction of M01_SPACECRAFT frame."         
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "AZ_LO_RAW"                                    
+    DATA_TYPE                = ASCII_REAL                                     
+    START_BYTE               = 56                                             
+    BYTES                    = 16                                             
+    FORMAT                   = "E16.8"                                        
+    UNIT                     = "METERS/SECOND/SECOND"                         
+    DESCRIPTION              = "Measured low-rate acceleration in             
+                               +Z direction of M01_SPACECRAFT frame."         
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+END_OBJECT                   = TABLE                                          
+                                                                              
+END                                                                           
